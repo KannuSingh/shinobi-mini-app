@@ -388,7 +388,7 @@ async function prepareCrossChainWithdrawalTransaction(
   const withdrawnAmount = BigInt(parseEther(request.withdrawAmount).toString());
   const feeAmount = (withdrawnAmount * WITHDRAWAL_FEES.DEFAULT_RELAY_FEE_BPS) / 10000n;
   const netAmount = withdrawnAmount - feeAmount; // Amount that goes to OIF escrow
-  const expectedAmountOnDestinationChain = (netAmount * 9n) / 10n; // For native ETH, no conversion
+  const expectedAmountOnDestinationChain = (netAmount * 99n) / 100n; // For native ETH, no conversion
   // Create intent parameters for OIF
   const currentTime = Math.floor(Date.now() / 1000);
   const intentParams = {
